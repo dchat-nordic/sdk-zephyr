@@ -1,0 +1,22 @@
+#
+# Copyright (c) 2021 Nordic Semiconductor
+#
+# SPDX-License-Identifier: LicenseRef-Nordic-5-Clause
+#
+
+description: |
+    InvenSense MPU-9250 Nine-Axis (Gyro + Accelerometer + Compass). See more
+    info at https://www.invensense.com/products/motion-tracking/9-axis/mpu-9250/
+
+compatible: "invensense,mpu9250"
+
+include: i2c-device.yaml
+
+properties:
+    irq-gpios:
+      type: phandle-array
+      required: false
+      description: |
+        The INT signal default configuration is active-high.  The
+        property value should ensure the flags properly describe the
+        signal that is presented to the driver.
